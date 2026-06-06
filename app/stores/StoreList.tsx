@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface Store {
   name: string;
   address: string;
   hours: string;
   phone: string;
-  image: string;
+  image: string | StaticImageData;
 }
 
 interface StoreListProps {

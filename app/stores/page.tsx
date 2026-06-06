@@ -3,39 +3,13 @@ import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import StoreList from "./StoreList";
+import { storesData } from "@/data/stores";
 
 export const metadata: Metadata = {
   title: "Hệ Thống Cửa Hàng",
   description:
     "Tìm kiếm không gian Uncle Huan Coffee gần bạn nhất để tận hưởng những tách cà phê thượng hạng trong không gian mang hơi thở Âu Châu hiện đại.",
 };
-
-const storesData = [
-  {
-    name: "Cà Phê Cậu Huân",
-    address: "657 Hai Bà Trưng, Hội An, Đà Nẵng",
-    hours: "07:00 - 23:30",
-    phone: "0905 417 794",
-    image:
-      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHReVS7PpUfJv1kvTJNzWj0pi2c8CdG9GZlbl53D3Ht2ORU9xZ_9g56rmqE9i_NQOU9j43fI-ZJJExIOoYLSXmOUbuTWQ_GDYkXej_TbGEJ6OxcLBI3uBffc-TAwI6490RHU6Q=s680-w680-h510-rw",
-  },
-  {
-    name: "Uncle Huan Coffee",
-    address: "71/26 Phan Chu Trinh, Hội An, Đà Nẵng",
-    hours: "07:00 - 18:00",
-    phone: "0777 815 773",
-    image:
-      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLhswpyGbxEqJy63Ku4-glExItSBafYQu8iDRz0IeujRge6gqXj5iUx98MKRJzHRWVvFIpC5LFvGs3DKzlQgJArUq0OGEou9QuN54qNQyEyXie7755KJmGOgFbWIwpbpr9QhHChZK5DDav=s680-w680-h510-rw",
-  },
-  {
-    name: "Uncle Huan Coffee & Restaurant",
-    address: "61 Lê Lợi, Hội An, Đà Nẵng",
-    hours: "07:00 - 23:00",
-    phone: "0905 417 794",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCCQF_g4_00eRZLk_ksH6_hgCyV_F-nPh-LgtyJIEodWmNi6uiKVXKJ0Eiz4sJiWx9zOhzgEnAoNpjbGNXuqeJvSuyepPhu0yHgE_8aTk3QoDnuJFmTFjDSxRGK73P5I1Vec1SUTJ9v0p8rbHhNZmdpCHkBhhsycvWQkYJfKzOGHG6k9ffqAhYEbaPv7XQHVSFUSAwSZ-62OA-KtDL6RmdG3K6468dV1Hsu6M3lLOtmyWWuLjvvmzhpk9WKRLmITcnTxVS7xhSgAA",
-  },
-];
 
 export default function StoresPage() {
   return (
