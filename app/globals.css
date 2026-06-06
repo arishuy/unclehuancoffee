@@ -1,26 +1,177 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Colors: Botanical Heritage ── */
+  --color-surface: #fcf9f8;
+  --color-surface-dim: #dcd9d9;
+  --color-surface-bright: #fcf9f8;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container: #f0eded;
+  --color-surface-container-high: #eae7e7;
+  --color-surface-container-highest: #e5e2e1;
+  --color-surface-variant: #e5e2e1;
+  --color-surface-tint: #396844;
+  --color-on-surface: #1b1b1c;
+  --color-on-surface-variant: #414941;
+
+  --color-primary: #001e09;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #003516;
+  --color-on-primary-container: #6ea077;
+  --color-primary-fixed: #baefc1;
+  --color-primary-fixed-dim: #9fd3a6;
+  --color-on-primary-fixed: #00210b;
+  --color-on-primary-fixed-variant: #20502e;
+  --color-inverse-primary: #9fd3a6;
+  --color-inverse-surface: #303030;
+  --color-inverse-on-surface: #f3f0ef;
+
+  --color-secondary: #5f5f58;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e4e3da;
+  --color-on-secondary-container: #65655e;
+  --color-secondary-fixed: #e4e3da;
+  --color-secondary-fixed-dim: #c8c7be;
+  --color-on-secondary-fixed: #1b1c17;
+  --color-on-secondary-fixed-variant: #474741;
+
+  --color-tertiary: #6e5e00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #c1ab41;
+  --color-on-tertiary-container: #4a3f00;
+  --color-tertiary-fixed: #fbe272;
+  --color-tertiary-fixed-dim: #dec659;
+  --color-on-tertiary-fixed: #211b00;
+  --color-on-tertiary-fixed-variant: #534600;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-outline: #717970;
+  --color-outline-variant: #c1c9be;
+  --color-background: #fcf9f8;
+  --color-on-background: #1b1b1c;
+
+  /* ── Typography: Font Families ── */
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* ── Spacing ── */
+  --spacing-base: 8px;
+  --spacing-gutter: 24px;
+  --spacing-section-gap: 120px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 64px;
+  --spacing-container-max: 1280px;
+
+  /* ── Animations ── */
+  --animate-subtle-zoom: subtle-zoom 20s infinite alternate;
+  --animate-pulse-ring: pulse-ring 2s infinite;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Keyframes ── */
+@keyframes subtle-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Base styles ── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-tertiary-fixed);
+  color: var(--color-on-tertiary-fixed);
+}
+
+/* ── Utility: Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Utility: Glass ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+/* ── Utility: No Scrollbar ── */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Utility: Timeline ── */
+.timeline-line {
+  background: linear-gradient(to bottom, transparent, #001e09, transparent);
+}
+
+/* ── Product Card Hover ── */
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+.product-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 53, 22, 0.05),
+    0 8px 10px -6px rgba(0, 53, 22, 0.05);
+  border-bottom: 2px solid #fbe272;
+}
+
+/* ── Form Focus ── */
+.form-input-focus:focus {
+  outline: none;
+  border-color: #001e09;
+  box-shadow: 0 0 0 2px rgba(222, 198, 89, 0.2);
+}
+
+/* ── Map Marker Pulse ── */
+.map-marker-pulse::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fbe272;
+  border-radius: 50%;
+  animation: pulse-ring 2s infinite;
+}
+
+/* ── Store Card ── */
+.store-card:hover .store-image {
+  transform: scale(1.05);
+}
+
+/* ── Modal Overlay ── */
+.modal-overlay {
+  background: rgba(0, 30, 9, 0.4);
+  backdrop-filter: blur(4px);
 }
