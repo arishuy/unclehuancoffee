@@ -17,7 +17,7 @@ export default function HomePage() {
       <header className="relative h-[600px] md:h-[921px] w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0 scale-105 animate-[subtle-zoom_20s_infinite_alternate]">
           <Image
-            src={banner}
+            src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/696900747_1493504585900810_8692639260685981652_n.jpg?stp=dst-jpg_tt6&cstp=mx1900x2048&ctp=s1900x2048&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeELIPGQzAnKzVqQdKS5HHJOoIKymvcnBGyggrKa9ycEbE9x_cTBQ1e5-Hyxm_EsMb08-EO7sLYmCtI3DkCalS9u&_nc_ohc=nc9y6giu7CkQ7kNvwGNBuhY&_nc_oc=AdqjsuAUk-jC4GwPzCkmikMVRfgskWbWhQ885DfWSGn1wRMfFoU3TO_3Voha-PR8dtkgztRf1Nv1exnYQ2JR-t5t&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=MzwyJxibbMte8cdmzkbqGA&_nc_ss=7b2a8&oh=00_Af8U6zUm7tSMM2UEvwQ6hg_WFT3s3HaUK7nce2ZeD7LmYA&oe=6A2AAE8B"
             alt="Signature latte art in a botanical cafe"
             fill
             className="object-cover brightness-75"

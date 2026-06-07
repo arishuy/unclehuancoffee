@@ -28,79 +28,8 @@ export default function StoresPage() {
           </p>
         </section>
 
-        {/* Search & Map Layout */}
-        <section className="px-4 md:px-16 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 pb-20 md:pb-[120px] pt-8">
-          {/* Left Panel */}
-          <div className="lg:col-span-5 flex flex-col gap-2 overflow-hidden h-fit lg:max-h-[850px]">
-            {/* Store List with Search and Filters */}
-            <StoreList stores={storesData} />
-          </div>
-
-          {/* Right Panel: Map Placeholder */}
-          <div className="lg:col-span-7 h-[500px] lg:h-full min-h-[500px] relative rounded-2xl overflow-hidden border border-outline-variant/30 shadow-inner">
-            <div className="absolute inset-0 bg-[#f0f0ed]">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD8KH8N9eVcrTnL6wbqAjvAPluF18ztlaVDWps6ymIDAEILNWiGm6RXDYZyLtm0corPA2eZuQgEfNMrxxWEoOYyZ2sHz1LkGmKPRJZADcyBFoj-c3Xgp7IvRjwgQkaYRZycoA1CAqV0tXzOKrW0c-vfyLAp9PtqGMY8HDK2EiV_XX50PozcExtShDqJIZmWHBTxjk172W3XCLJJUmdKLRBIKTLFHjeJpj9If6GiCA_4-wjWGRD-p9KRcM8EOSO3wW97petcykmdg"
-                alt="Map of store locations"
-                fill
-                className="object-cover opacity-60 grayscale-[50%]"
-              />
-              {/* Map Markers */}
-              <div className="absolute top-[30%] left-[40%] group cursor-pointer">
-                <div className="relative flex items-center justify-center">
-                  <div className="map-marker-pulse" />
-                  <span
-                    className="material-symbols-outlined text-primary-container text-4xl relative z-10"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    location_on
-                  </span>
-                  <div className="absolute bottom-full mb-2 bg-primary text-on-primary px-3 py-1 rounded text-[12px] leading-[16px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-                    Uncle Huan - Đồng Khởi
-                  </div>
-                </div>
-              </div>
-              <div className="absolute top-[60%] left-[55%] group cursor-pointer">
-                <div className="relative flex items-center justify-center">
-                  <span
-                    className="material-symbols-outlined text-primary-container text-4xl relative z-10"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    location_on
-                  </span>
-                  <div className="absolute bottom-full mb-2 bg-primary text-on-primary px-3 py-1 rounded text-[12px] leading-[16px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-                    Uncle Huan - Hồ Tây
-                  </div>
-                </div>
-              </div>
-              <div className="absolute top-[45%] left-[70%] group cursor-pointer">
-                <div className="relative flex items-center justify-center">
-                  <span
-                    className="material-symbols-outlined text-primary-container text-4xl relative z-10"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    location_on
-                  </span>
-                  <div className="absolute bottom-full mb-2 bg-primary text-on-primary px-3 py-1 rounded text-[12px] leading-[16px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-                    Uncle Huan - Bạch Đằng
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Map Controls */}
-            <div className="absolute bottom-6 right-6 flex flex-col gap-2">
-              <button className="w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors">
-                <span className="material-symbols-outlined">add</span>
-              </button>
-              <button className="w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors">
-                <span className="material-symbols-outlined">remove</span>
-              </button>
-              <button className="w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center text-primary hover:bg-tertiary-fixed transition-colors">
-                <span className="material-symbols-outlined">my_location</span>
-              </button>
-            </div>
-          </div>
-        </section>
+        {/* Search & Map Interactive Layout */}
+        <StoreList stores={storesData} />
       </main>
 
       <Footer />

@@ -12,7 +12,7 @@ export interface Store {
 export const storesData: Store[] = [
   {
     name: "Cà Phê Cậu Huân",
-    address: "657 Hai Bà Trưng, Hội An, Đà Nẵng",
+    address: "675 Hai Bà Trưng, Phường Minh An, Hội An, Quảng Nam",
     hours: "07:00 - 23:30",
     phone: "0905 417 794",
     image:
@@ -20,7 +20,7 @@ export const storesData: Store[] = [
   },
   {
     name: "Uncle Huan Coffee",
-    address: "71/26 Phan Chu Trinh, Hội An, Đà Nẵng",
+    address: "71/26 Phan Chu Trinh, Phường Minh An, Hội An, Quảng Nam",
     hours: "07:00 - 18:00",
     phone: "0777 815 773",
     image:
@@ -28,9 +28,10 @@ export const storesData: Store[] = [
   },
   {
     name: "Uncle Huan Coffee & Restaurant",
-    address: "61 Lê Lợi, Hội An, Đà Nẵng",
+    address: "61 Lê Lợi, Phường Minh An, Hội An, Quảng Nam",
     hours: "07:00 - 23:00",
     phone: "0905 417 794",
     image: coso3,
   },
 ];
+
